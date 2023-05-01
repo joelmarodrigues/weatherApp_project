@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JavaFX App",
+            "request": "launch",
+            "mainClass": "com.example.WeatherApp",
+            "vmArgs": "--module-path lib/javafx-sdk-17.0.1/lib --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
