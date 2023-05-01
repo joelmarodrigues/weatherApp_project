@@ -39,6 +39,7 @@ public class WeatherGUI extends JFrame {
         // Create the search button with magnifying glass icon
         searchButton = new JButton();
         searchButton.setIcon(new ImageIcon("res/magnifier-16.png"));
+        searchButton.setFocusPainted(false);
         searchButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
@@ -68,21 +69,34 @@ public class WeatherGUI extends JFrame {
 
         // Create the middle panel with location and temperature labels
         JPanel middlePanel = new JPanel();
-        middlePanel.setLayout(new BoxLayout(middlePanel, BoxLayout.Y_AXIS));
+        middlePanel.setLayout(new BorderLayout());
         middlePanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        middlePanel.add(getLocationLabel());
-        middlePanel.add(getTemperatureLabel());
+        middlePanel.add(getLocationPanel(), BorderLayout.CENTER);
+
+
+        // Create the location label
+        JLabel locationLabel = getLocationLabel();
+        locationLabel.setHorizontalAlignment(JLabel.CENTER);
+        middlePanel.add(locationLabel, BorderLayout.NORTH);
+
+        // Create the temperature label
+        JLabel temperatureLabel = getTemperatureLabel();
+        temperatureLabel.setHorizontalAlignment(JLabel.CENTER);
+        middlePanel.add(temperatureLabel, BorderLayout.CENTER);
+
 
         // Create the bottom panel with weather data
         weatherTextArea = new JTextArea();
         weatherTextArea.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(weatherTextArea);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        weatherTextArea.setLineWrap(true);
+        weatherTextArea.setWrapStyleWord(true);
+        weatherTextArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        weatherTextArea.setBackground(getBackground());
 
         // Add the panels to the frame
         add(topPanel, BorderLayout.NORTH);
         add(middlePanel, BorderLayout.CENTER);
-        add(scrollPane, BorderLayout.SOUTH);
+        add(weatherTextArea, BorderLayout.SOUTH);
 
         // Set the size of the frame and make it visible
         pack();
@@ -94,10 +108,19 @@ public class WeatherGUI extends JFrame {
         // Parse the weather data and update the labels
         JSONObject json = new JSONObject(weatherData);
     
+        // Format the date and time strings
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        dateTimeLabel.setText(now.format(formatter));
-    
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String dateStr = now.format(dateFormatter);
+        String timeStr = now.format(timeFormatter);
+
+        // Create the HTML string for multi-line text
+        String htmlStr = "<html><div style='text-align: center;'>";
+        htmlStr += dateStr + "<br>";
+        htmlStr += timeStr + "</div></html>";
+        dateTimeLabel.setText(htmlStr);
+            
         String locationName = json.getString("name");
         String locationCountry = json.getJSONObject("sys").getString("country");
         locationLabel.setText(locationName + ", " + locationCountry);
@@ -119,26 +142,42 @@ public class WeatherGUI extends JFrame {
     
         temperatureLabel.setText(temperature + "°C");
         weatherTextArea.setText(formattedSummary + "\n\n" + weatherInfo);
+
+
     }
-    
     
     private JLabel getDateTimeLabel() {
         dateTimeLabel = new JLabel();
-        dateTimeLabel.setHorizontalAlignment(JLabel.RIGHT);
+        dateTimeLabel.setFont(new Font("Helvetica", Font.PLAIN, 14));
+        dateTimeLabel.setHorizontalAlignment(JLabel.CENTER);
+
         return dateTimeLabel;
+    }
+    
+    
+    private JPanel getLocationPanel() {
+        JPanel locationPanel = new JPanel();
+        locationPanel.setLayout(new BoxLayout(locationPanel, BoxLayout.Y_AXIS));
+        locationPanel.setBackground(Color.WHITE);
+        locationPanel.add(Box.createVerticalGlue());
+        locationPanel.add(getLocationLabel());
+        locationPanel.add(getTemperatureLabel());
+        locationPanel.add(Box.createVerticalGlue());
+        return locationPanel;
     }
     
     private JLabel getLocationLabel() {
         locationLabel = new JLabel();
-        locationLabel.setFont(new Font("Helvetica", Font.PLAIN, 18));
+        locationLabel.setFont(new Font("Helvetica", Font.BOLD, 36));
         locationLabel.setHorizontalAlignment(JLabel.CENTER);
         return locationLabel;
     }
     
     private JLabel getTemperatureLabel() {
         temperatureLabel = new JLabel();
-        temperatureLabel.setFont(new Font("Helvetica", Font.BOLD, 36));
+        temperatureLabel.setFont(new Font("Helvetica", Font.BOLD, 42));
         temperatureLabel.setHorizontalAlignment(JLabel.CENTER);
         return temperatureLabel;
     }
+    
 }    
