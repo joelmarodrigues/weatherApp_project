@@ -1,0 +1,7 @@
+String apiKey = null;
+try (BufferedReader br = new BufferedReader(new FileReader("api_key.txt"))) {
+    apiKey = br.readLine();
+} catch (IOException e) {
+    e.printStackTrace();
+}
+WeatherApp weatherApp = new WeatherApp(apiKey);
