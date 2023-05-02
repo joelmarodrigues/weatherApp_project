@@ -15,7 +15,7 @@ A simple desktop application built using Java Swing that allows users to search 
 
 ## Installation and Setup
 
-1. Clone this repository: `git clone https://github.com/yourusername/WeatherApp.git`
+1. Clone this repository: `git clone https://github.com/joelmarodrigues/WeatherApp.git`
 2. Open the project in your preferred Java IDE
 3. Replace `API_KEY` in `WeatherApp.java` with your OpenWeatherMap API key
 4. Run the `WeatherApp.java` file to start the application
