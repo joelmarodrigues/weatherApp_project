@@ -8,6 +8,15 @@ A simple desktop application built using Java Swing that allows users to search 
 - Display the current temperature, weather summary, feels-like temperature, humidity, wind speed, visibility, and timezone information
 - Error handling for when the location entered by the user is not found or when there is an error retrieving weather data
 
+<table>
+  <tr>
+    <td><img src="image1.png" width="300"></td>
+    <td><img src="image2.png" width="300"></td>
+    <td><img src="image3.png" width="300"></td>
+  </tr>
+</table>
+
+
 ## Prerequisites
 
 - Java Development Kit (JDK) 8 or higher
