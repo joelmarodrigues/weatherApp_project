@@ -1,18 +1,37 @@
-## Getting Started
+# Weather App
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A simple desktop application built using Java Swing that allows users to search for weather information for a given location. This application uses the OpenWeatherMap API to retrieve weather data.
 
-## Folder Structure
+## Features
 
-The workspace contains two folders by default, where:
+- Search for weather information for a given location
+- Display the current temperature, weather summary, feels-like temperature, humidity, wind speed, visibility, and timezone information
+- Error handling for when the location entered by the user is not found or when there is an error retrieving weather data
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Prerequisites
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Java Development Kit (JDK) 8 or higher
+- OpenWeatherMap API key (sign up for a free account [here](https://home.openweathermap.org/users/sign_up))
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Installation and Setup
 
-## Dependency Management
+1. Clone this repository: `git clone https://github.com/yourusername/WeatherApp.git`
+2. Open the project in your preferred Java IDE
+3. Replace `API_KEY` in `WeatherApp.java` with your OpenWeatherMap API key
+4. Run the `WeatherApp.java` file to start the application
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Usage
+
+1. Enter a location in the search field and click the magnifying glass button or press Enter
+2. If the location is found, the weather information will be displayed in the middle and bottom panels
+3. If the location is not found or there is an error retrieving weather data, an error message will be displayed and the search field border will turn red
+4. To search for weather information for another location, clear the search field and enter a new location
+
+## Resources
+
+- [Java Swing UI - Synthetica Paid Premium Look and Feel Test](https://www.youtube.com/watch?v=He-1O8Pa4SE&t=44s) by KeepToo on YouTube
+- [GUI in Java [Complete Practical Guide]](https://iq.opengenus.org/gui-in-java/) by Abhijeet Saroha on OpenGenus IQ
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
