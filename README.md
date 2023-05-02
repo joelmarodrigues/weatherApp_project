@@ -29,6 +29,7 @@ A simple desktop application built using Java Swing that allows users to search 
 
 ## Resources
 
+- [Java Swing Tutorial [How to Create a GUI Application in Java]]([https://iq.opengenus.org/gui-in-java/](https://www.guru99.com/java-swing-gui.html) by James Hartman on Guru99
 - [Java Swing UI - Synthetica Paid Premium Look and Feel Test](https://www.youtube.com/watch?v=He-1O8Pa4SE&t=44s) by KeepToo on YouTube
 - [GUI in Java [Complete Practical Guide]](https://iq.opengenus.org/gui-in-java/) by Abhijeet Saroha on OpenGenus IQ
 
