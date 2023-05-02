@@ -38,14 +38,11 @@ public class WeatherApp {
     }
 
     public static void main(String[] args) {
-        String apiKey = "YOUR_API_KEY_HERE";
+        String apiKey = "API_KEY_HERE";
         WeatherApp weatherApp = new WeatherApp(apiKey);
-
-        try {
-            String weatherData = weatherApp.getWeatherData("Toronto");
-            System.out.println(weatherData);
-        } catch (IOException e) {
-            System.out.println("Error retrieving weather data.");
-        }
+        WeatherGUI weatherGUI = new WeatherGUI(weatherApp);
+        weatherGUI.pack();
+        weatherGUI.setLocationRelativeTo(null);
+        weatherGUI.setVisible(true);
     }
 }
