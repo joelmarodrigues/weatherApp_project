@@ -10,8 +10,8 @@ A desktop application to easily search for weather information for any location!
 <table>
   <tr>
     <td><img src="res/dublin.png" width="300"></td>
-    <td><img src="image2.png" width="300"></td>
-    <td><img src="image3.png" width="300"></td>
+    <td><img src="res/hong-kong.png" width="300"></td>
+    <td><img src="res/error.png" width="300"></td>
   </tr>
 </table>
 
