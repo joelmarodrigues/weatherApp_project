@@ -11,11 +11,7 @@ A desktop application to easily search for weather information for any location!
   <tr>
     <td><img src="res/dublin.png" width="300"></td>
     <td><img src="res/error.png" width="300"></td>
-        <td><video width="300" height="200" controls>
-           <source src="res/WeatherFinder.mp4" type="video/mp4">
-           Your browser does not support the video tag.
-       </video>
-    </td>
+    <td><img src="res/hong-kong.png" width="300"></td>
   </tr>
 </table>
 
@@ -33,7 +29,7 @@ A desktop application to easily search for weather information for any location!
 4. Run the `WeatherApp.java` file to start the application
 
 ## Usage
-
+[Watch the demo video](https://www.loom.com/share/792a2abbe1da4c2fbe76cac9099015e2)
 1. Enter a location in the search field and click the magnifying glass button or press Enter
 2. If the location is found, the weather information will be displayed in the middle and bottom panels
 3. If the location is not found or there is an error retrieving weather data, an error message will be displayed and the search field border will turn red
