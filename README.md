@@ -29,6 +29,10 @@ A desktop application to easily search for weather information for any location!
 4. Run the `WeatherApp.java` file to start the application
 
 ## Usage
+<video width="320" height="240" autoplay loop>
+  <source src="res/WeatherFinder.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 1. Enter a location in the search field and click the magnifying glass button or press Enter
 2. If the location is found, the weather information will be displayed in the middle and bottom panels
