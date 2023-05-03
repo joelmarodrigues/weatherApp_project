@@ -1,6 +1,7 @@
-# Weather App
+# WeatherFinder App
 
-A simple desktop application built using Java Swing that allows users to search for weather information for a given location. This application uses the OpenWeatherMap API to retrieve weather data.
+A simple desktop application built using Java Swing that allows users to search for weather information for a given location. 
+This application uses the OpenWeatherMap API to retrieve weather data.
 
 ## Features
 
