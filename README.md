@@ -10,8 +10,12 @@ A desktop application to easily search for weather information for any location!
 <table>
   <tr>
     <td><img src="res/dublin.png" width="300"></td>
-     <td><video src="res/WeatherFinder.mp4" controls width="300"></video></td>
     <td><img src="res/error.png" width="300"></td>
+        <td><video width="300" height="200" controls>
+           <source src="res/WeatherFinder.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+       </video>
+    </td>
   </tr>
 </table>
 
