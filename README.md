@@ -1,13 +1,11 @@
 # WeatherFinder App
 
-A simple desktop application built using Java Swing that allows users to search for weather information for a given location. 
-This application uses the OpenWeatherMap API to retrieve weather data.
+A desktop application to easily search for weather information for any location! Built using Java Swing and powered by the OpenWeatherMap API, this app offers a simple and efficient way to retrieve the latest weather data.
 
 ## Features
 
-- Search for weather information for a given location
-- Display the current temperature, weather summary, feels-like temperature, humidity, wind speed, visibility, and timezone information
-- Error handling for when the location entered by the user is not found or when there is an error retrieving weather data
+- View the current temperature, weather summary, feels-like temperature, humidity, wind speed, visibility, and timezone information for any location you search.
+- Plus, the app has built-in error handling to ensure that you receive accurate information every time.
 
 <table>
   <tr>
@@ -19,7 +17,7 @@ This application uses the OpenWeatherMap API to retrieve weather data.
 
 
 ## Prerequisites
-
+- Getting started is easy! All you need is:
 - Java Development Kit (JDK) 8 or higher
 - OpenWeatherMap API key (sign up for a free account [here](https://home.openweathermap.org/users/sign_up))
 
@@ -38,7 +36,7 @@ This application uses the OpenWeatherMap API to retrieve weather data.
 4. To search for weather information for another location, clear the search field and enter a new location
 
 ## Resources
-
+- To learn more about:
 - [Java Swing Tutorial - How to Create a GUI Application in Java](https://www.guru99.com/java-swing-gui.html) by James Hartman on Guru99
 - [Java Swing UI - Synthetica Paid Premium Look and Feel Test](https://www.youtube.com/watch?v=He-1O8Pa4SE&t=44s) by KeepToo on YouTube
 - [GUI in Java [Complete Practical Guide]](https://iq.opengenus.org/gui-in-java/) by Abhijeet Saroha on OpenGenus IQ
@@ -46,3 +44,5 @@ This application uses the OpenWeatherMap API to retrieve weather data.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+-Get started today and never be caught off guard by the weather again!
