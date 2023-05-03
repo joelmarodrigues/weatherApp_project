@@ -10,7 +10,7 @@ A simple desktop application built using Java Swing that allows users to search 
 
 <table>
   <tr>
-    <td><img src="image1.png" width="300"></td>
+    <td><img src="res/dublin.png" width="300"></td>
     <td><img src="image2.png" width="300"></td>
     <td><img src="image3.png" width="300"></td>
   </tr>
